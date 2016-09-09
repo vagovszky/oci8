@@ -125,7 +125,7 @@ class Connection extends AbstractBase implements ConnectionInterface
         set_error_handler(static::getErrorHandler());
         $cursor = oci_new_cursor($this->resource);
         restore_error_handler();
-        return new Oci8Cursor($cursor);
+        return new Cursor($cursor);
     }
 
     public function getNewDescriptor($type = OCI_DTYPE_LOB)
@@ -163,7 +163,7 @@ class Connection extends AbstractBase implements ConnectionInterface
         set_error_handler(static::getErrorHandler());
         $resource = oci_parse($this->resource, $sqlText);
         restore_error_handler();
-        return new Oci8Statement($resource);
+        return new Statement($resource);
     }
 
     public function setAction($actionName)

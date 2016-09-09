@@ -21,7 +21,7 @@ $ composer require vagovszky/oci8
 Connect to a database, execute a query and fetch a row:
 
 ``` php
-$db = new Oci8\Connection('username', 'password', 'SID');
+$db = new Oci8\Connection('username', 'password', 'connstring');
 $statement = $db->parse('SELECT * FROM dual');
 $statement->execute();
 $row = $statement->fetchAssoc();
