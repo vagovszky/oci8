@@ -1,0 +1,22 @@
+{
+    "name": "vagovszky/oci8",
+    "description": "Wrapper for PHP oci8 / Oracle functions",
+    "type": "library",
+    "keywords": ["oci8", "oracle", "php"],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "Martin Vagovszky",
+            "email": "vagovszky@gmail.com",
+            "homepage": ""
+        }
+    ],
+    "autoload": {
+        "psr-4" : {
+            "Oci8\\" : "src"
+        }
+    }
+}
